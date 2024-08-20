@@ -1,8 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Trekbag
+## Trip packing app UI made with React + Zustand
+Nothing fancy, just a demo app to get my feet wet with Zustand and more React experience. Simple UI that lets you add items to a packing list, check them off, sort them, and some list-wide operations. Everything saved to LocalStorage through Zustand's `persist()` in the primary store.
