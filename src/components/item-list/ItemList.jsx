@@ -1,17 +1,15 @@
 import { useMemo, useState } from "react";
-import { useItemsContext } from "../../lib/hooks";
+import { useItemStore } from "../../stores/itemsStore";
 import { selectOptions } from "../../lib/constants";
-import Item from "./Item";
 import Select from 'react-select';
+import Item from "./Item";
 
 const ItemList = () => {
   const [sortBy, setSortBy] = useState( 'default' );
 
-  const {
-    items,
-    handleCheckItem,
-    handleDeleteItem,
-  } = useItemsContext();
+  const items = useItemStore( state => state.items );
+  const checkItem = useItemStore( state => state.checkItem );
+  const deleteItem = useItemStore( state => state.deleteItem );
 
   const sortedItems = useMemo( () => [...items].sort( ( a, b ) => {
     if ( sortBy === 'packed' ) {
@@ -40,8 +38,8 @@ const ItemList = () => {
           <Item
             key={ item.id }
             item={ item }
-            onCheckItem={ handleCheckItem }
-            onDeleteItem={ () => handleDeleteItem( item.id ) }
+            onCheckItem={ checkItem }
+            onDeleteItem={ () => deleteItem( item.id ) }
           />
         );
       } ) }

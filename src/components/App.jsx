@@ -1,4 +1,3 @@
-import ItemsProvider from '../contexts/ItemsProvider';
 import BackgroundHeading from './BackgroundHeading';
 import Header from './Header';
 import ItemsListWrapper from './ItemsListWrapper';
@@ -11,13 +10,9 @@ function App() {
       <BackgroundHeading />
 
       <main>
-        <ItemsProvider>
-          <Header />
-
-          <ItemsListWrapper />
-
-          <Sidebar />
-        </ItemsProvider>
+        <Header />
+        <ItemsListWrapper />
+        <Sidebar />
       </main>
 
       <Footer />
