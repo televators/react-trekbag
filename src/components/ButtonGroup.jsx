@@ -1,27 +1,27 @@
 import Button from "./Button";
 
 const ButtonGroup = ( {
-  handleMarkAllComplete,
-  handleMarkAllIncomplete,
-  handleReset,
-  handleRemoveAll,
+  onMarkAllComplete,
+  onMarkAllIncomplete,
+  onReset,
+  onRemoveAll,
 } ) => {
   const buttons = [
     {
       text: 'Mark all as complete',
-      onClick: handleMarkAllComplete,
+      onClick: onMarkAllComplete,
     },
     {
       text: 'Mark all as incomplete',
-      onClick: handleMarkAllIncomplete,
+      onClick: onMarkAllIncomplete,
     },
     {
       text: 'Reset',
-      onClick: handleReset,
+      onClick: onReset,
     },
     {
       text: 'Remove all items',
-      onClick: handleRemoveAll,
+      onClick: onRemoveAll,
     },
   ];
 

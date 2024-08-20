@@ -1,4 +1,11 @@
-const Counter = ( { items } ) => {
+import { useContext } from "react";
+import { ItemsContext } from "../contexts/ItemsProvider";
+
+const Counter = () => {
+  const {
+    items,
+  } = useContext( ItemsContext );
+
   const itemCount = items.length;
   let checkedItemCount = 0;
 
