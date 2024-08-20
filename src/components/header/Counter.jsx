@@ -1,9 +1,7 @@
-import { useItemsContext } from "../../lib/hooks";
+import { useItemStore } from "../../stores/itemsStore";
 
 const Counter = () => {
-  const {
-    items,
-  } = useItemsContext();
+  const items = useItemStore( ( state ) => state.items );
 
   const itemCount = items.length;
   let checkedItemCount = 0;
