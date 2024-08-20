@@ -1,8 +1,12 @@
 import { useRef } from "react";
 import { v4 as uuid } from 'uuid';
+import { useItemsContext } from "../../lib/hooks";
 import Button from "./Button";
 
 const AddItemForm = ( { onAddItem } ) => {
+  const {
+    handleAddItem,
+  } = useItemsContext();
   const inputRef = useRef();
 
   const handleSubmit = ( e ) => {
@@ -22,7 +26,7 @@ const AddItemForm = ( { onAddItem } ) => {
       packed: false,
     };
 
-    onAddItem( newItem );
+    handleAddItem( newItem );
     inputRef.current.value = '';
     inputRef.current.focus();
   };

@@ -1,5 +1,5 @@
-import Counter from './Counter';
-import Logo from './Logo';
+import Counter from './header/Counter';
+import Logo from './header/Logo';
 
 const Header = () => {
   return (

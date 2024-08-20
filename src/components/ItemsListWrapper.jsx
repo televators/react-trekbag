@@ -1,12 +1,11 @@
-import { useContext } from "react";
-import { ItemsContext } from "../contexts/ItemsProvider";
-import ItemList from './ItemList';
-import EmptyView from './EmptyView';
+import { useItemsContext } from '../lib/hooks';
+import ItemList from './item-list/ItemList';
+import EmptyView from './item-list/EmptyView';
 
 const ItemsListWrapper = () => {
   const {
     items,
-  } = useContext( ItemsContext );
+  } = useItemsContext();
 
   return (
     <>

@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { ItemsContext } from "../contexts/ItemsProvider";
+import { useItemsContext } from "../../lib/hooks";
 
 const Counter = () => {
   const {
     items,
-  } = useContext( ItemsContext );
+  } = useItemsContext();
 
   const itemCount = items.length;
   let checkedItemCount = 0;

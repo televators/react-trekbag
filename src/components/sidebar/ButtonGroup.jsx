@@ -1,27 +1,30 @@
+import { useItemsContext } from "../../lib/hooks";
 import Button from "./Button";
 
-const ButtonGroup = ( {
-  onMarkAllComplete,
-  onMarkAllIncomplete,
-  onReset,
-  onRemoveAll,
-} ) => {
+const ButtonGroup = () => {
+  const {
+    handleMarkAllComplete,
+    handleMarkAllIncomplete,
+    handleReset,
+    handleRemoveAll,
+  } = useItemsContext();
+
   const buttons = [
     {
       text: 'Mark all as complete',
-      onClick: onMarkAllComplete,
+      onClick: handleMarkAllComplete,
     },
     {
       text: 'Mark all as incomplete',
-      onClick: onMarkAllIncomplete,
+      onClick: handleMarkAllIncomplete,
     },
     {
       text: 'Reset',
-      onClick: onReset,
+      onClick: handleReset,
     },
     {
       text: 'Remove all items',
-      onClick: onRemoveAll,
+      onClick: handleRemoveAll,
     },
   ];
 

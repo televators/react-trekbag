@@ -1,6 +1,6 @@
-import { useContext, useMemo, useState } from "react";
-import { ItemsContext } from "../contexts/ItemsProvider";
-import { selectOptions } from "../lib/constants";
+import { useMemo, useState } from "react";
+import { useItemsContext } from "../../lib/hooks";
+import { selectOptions } from "../../lib/constants";
 import Item from "./Item";
 import Select from 'react-select';
 
@@ -11,7 +11,7 @@ const ItemList = () => {
     items,
     handleCheckItem,
     handleDeleteItem,
-  } = useContext( ItemsContext );
+  } = useItemsContext();
 
   const sortedItems = useMemo( () => [...items].sort( ( a, b ) => {
     if ( sortBy === 'packed' ) {
