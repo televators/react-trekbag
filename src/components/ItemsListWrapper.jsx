@@ -1,11 +1,9 @@
-import { useItemsContext } from '../lib/hooks';
 import ItemList from './item-list/ItemList';
 import EmptyView from './item-list/EmptyView';
+import { useItemStore } from '../stores/itemsStore';
 
 const ItemsListWrapper = () => {
-  const {
-    items,
-  } = useItemsContext();
+  const items = useItemStore( state => state.items );
 
   return (
     <>
